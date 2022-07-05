@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+# Broken rules
+SELINUX_IGNORE_NEVERALLOWS := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/surya
@@ -105,6 +109,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
     LLVM_IAS=1
 
 TARGET_KERNEL_APPEND_DTB := false
+TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := surya_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
