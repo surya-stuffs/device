@@ -172,3 +172,5 @@ TW_EXCLUDE_LPDUMP := true
 TW_EXCLUDE_LPTOOLS := true
 TW_INCLUDE_PYTHON := true
 
+# TWRP Version
+TW_DEVICE_VERSION := -TheStrechh
