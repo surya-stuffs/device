@@ -22,20 +22,21 @@ Works:
 - [X] Sideload (adb sideload update.zip)
 - [X] Reboot to bootloader/recovery/system/fasbootd
 - [X] F2FS/EXT4 Support, exFAT/NTFS where supported
+- [X] FBE V2 by subhajeetmuhuri (kenny)
 
 ## Compile
 
 First checkout minimal twrp with aosp tree:
 
 ```
-repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo init --depth=1 -u https://github.com/TheStrechh/platform_manifest_twrp_aosp.git -b twrp-12.1
 repo sync
 ```
 
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/xiaomi/surya" name="brigudav/android_device_xiaomi_surya_twrp" remote="github" revision="android-12.1" />
+<project path="device/xiaomi/surya" name="xiaomeme-surya/android_device_xiaomi_surya" remote="github" revision="twrp-12.1" />
 ```
 
 Finally execute these:
@@ -43,7 +44,7 @@ Finally execute these:
 ```
 . build/envsetup.sh
 lunch twrp_surya-eng
-mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
+make recoveryimage && ALLOW_MISSING_DEPENDENCIES=true # Only if you use minimal twrp tree.
 ```
 
 To test it:
