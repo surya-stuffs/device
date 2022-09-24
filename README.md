@@ -3,27 +3,6 @@ For building TWRP for POCO X3 / X3 NFC (codenamed "karna / surya")
 
 TWRP device tree for POCO X3 (karna/surya)
 
-## Features
-
-Works:
-
-- [X] ADB
-- [X] Decryption of /data (MIUI A11/Custom rom A12.1)
-- [X] Screen brightness settings
-- [X] Vibration support
-- [X] Correct screenshot
-- [X] Correct date/battery level/temperature
-- [X] MTP
-- [X] Flashing (opengapps, roms, images and so on)
-- [X] Backup/Restore to internal/microSD
-- [X] Backup/Restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [X] USB OTG
-- [X] Fasbootd
-- [X] Sideload (adb sideload update.zip)
-- [X] Reboot to bootloader/recovery/system/fasbootd
-- [X] F2FS/EXT4 Support, exFAT/NTFS where supported
-- [X] FBE V2 by subhajeetmuhuri (kenny)
-
 ## Compile
 
 First checkout minimal twrp with aosp tree:
